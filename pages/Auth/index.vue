@@ -136,7 +136,6 @@ export default {
       this.$bvModal.hide('deleteModal')
     },
     async updateItem() {
-      console.log(this.selectedItem.active)
       await this.$store.dispatch('user/updateItem', {
         id: this.selectedItem.id,
         payload: {

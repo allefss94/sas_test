@@ -51,8 +51,7 @@ export const actions = {
   async createHouseRule({ commit, dispatch }, payload) {
     try {
       commit('SET_LOADING', true)
-      const response = await this.$api.post('/house_rules', payload)
-      console.log('from store', response)
+      await this.$api.post('/house_rules', payload)
     } catch (error) {
       console.log(error)
     } finally {

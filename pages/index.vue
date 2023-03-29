@@ -66,13 +66,15 @@ export default {
     async onSubmit() {
       const data = await this.$store.dispatch('user/login', {
         login: {
-          email: 'task@searchandstay.com',
-          password: 'ph37i45K',
+          email: this.form.email,
+          password: this.form.password,
         },
       })
 
       if (data) {
         this.$router.push('/Auth')
+      } else {
+        this.$toast.error('Login Error')
       }
     },
   },
