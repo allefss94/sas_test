@@ -59,6 +59,9 @@ export default {
       password: '',
     },
   }),
+  mounted() {
+    // this.$toast.error('ahsuahsuh')
+  },
   methods: {
     async onSubmit() {
       const data = await this.$store.dispatch('user/login', {

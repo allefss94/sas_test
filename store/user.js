@@ -22,17 +22,6 @@ export const mutations = {
   SET_HOUSE_RULES: (state, payload) => {
     state.house_rules = payload
   },
-  REMOVE_HOUSE_RULE: (state, payload) => {
-    state.house_rules = state.house_rules.filter(
-      (rule) => rule.id !== payload.id
-    )
-  },
-  UPDATE_HOUSE_RULE: (state, { itemIndex, newValues }) => {
-    state.house_rules[itemIndex] = {
-      ...state.house_rules[itemIndex],
-      ...newValues,
-    }
-  },
 }
 
 export const actions = {
